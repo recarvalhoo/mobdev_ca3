@@ -10,17 +10,17 @@ import { ApiService } from '../../services/api.service';
 })
 export class FilmsPage implements OnInit {
 
-  films: Observable<any>;
+  characters: Observable<any>;
 
   constructor(private router: Router, private api: ApiService) { }
 
   ngOnInit() {
-    this.films = this.api.getFilms();
+    this.characters = this.api.getCharacters();
   }
 
-  openDetails(film){
-    let split = film.url.split('/');
+  openDetails(character){
+    let split = character.url.split('/');
     let filmId = split[split.length-2];
-    this.router.navigateByUrl(`/tabs/films/${filmId}`);
+    this.router.navigateByUrl(`/tabs/films/${characterId}`);
   }
 }
