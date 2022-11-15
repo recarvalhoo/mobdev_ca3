@@ -17,4 +17,4 @@ import { CharacterDetailsPage } from './character-details.page';
   ],
   declarations: [CharacterDetailsPage]
 })
-export class CharactersDetailsPageModule { }
+export class CharacterDetailsPageModule {}

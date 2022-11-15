@@ -1,30 +1,30 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="end" defaulthref="/tabs/characters">
-      <ion-back-button>RETURN</ion-back-button>
+      <ion-back-button>Return</ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">{{ character?.name }}</ion-title>
+    <ion-title class="ion-text-center">CHARACTER DETAIL</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-card *ngIf="character" class="character-card">
-
     <ion-item lines="none">
-      <ion-icon name="document-lock-outline" slot="start"></ion-icon>
+      <ion-icon name="pencil-outline" slot="start"></ion-icon>
+      Name: {{ character.name }}
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="text-outline" slot="start"></ion-icon>
       Nickname: {{ character.nickname }}
     </ion-item>
-
     <ion-item lines="none">
-      <ion-icon name="calendar" slot="start"></ion-icon>
+      <ion-icon name="calendar-outline" slot="start"></ion-icon>
       Birthday: {{ character.birthday }}
     </ion-item>
-
     <ion-item>
-      <ion-icon name="id-card-outline" slot="start"></ion-icon>
+      <ion-icon name="briefcase-outline" slot="start"></ion-icon>
       Occupation: {{ character.occupation }}
     </ion-item>
-
     <ion-item class="character-info">
       <ion-icon name="alert-circle-outline" slot="start"></ion-icon>
       Status: {{ character.status }}
