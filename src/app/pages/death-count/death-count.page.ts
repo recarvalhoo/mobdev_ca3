@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-death-count',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeathCountPage implements OnInit {
 
-  constructor() { }
+  deaths: Observable<any>;
+
+  constructor(private router: Router, private api: ApiService) { }
 
   ngOnInit() {
-  }
+    this.deaths = this.api.getDeaths();
+    }
+
 
 }

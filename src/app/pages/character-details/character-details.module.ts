@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CharactersDetailsPageRoutingModule } from './character-details-routing.module';
+import { CharacterDetailsPageRoutingModule } from './character-details-routing.module';
 
 import { CharacterDetailsPage } from './character-details.page';
 
@@ -13,8 +13,8 @@ import { CharacterDetailsPage } from './character-details.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CharactersDetailsPageRoutingModule
+    CharacterDetailsPageRoutingModule
   ],
   declarations: [CharacterDetailsPage]
 })
-export class CharactersDetailsPageModule {}
+export class CharactersDetailsPageModule { }
