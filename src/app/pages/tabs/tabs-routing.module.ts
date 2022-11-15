@@ -9,33 +9,46 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'films',
+        path: 'characters',
         children: [
           {
             path: '',
-            loadChildren: () => import('../films/films.module').then( m => m.FilmsPageModule)
+            loadChildren: () => import('../characters/characters.module').then( m => m.CharactersPageModule)
           },
           {
             path: ':id',
-            loadChildren: () => import('../film-details/film-details.module').then( m => m.FilmDetailsPageModule)
+            loadChildren: () => import('../characters-details/characters-details.module').then( m => m.CharactersDetailsPageModule)
           }
         ]
       },
       {
-        path: 'people',
+        path: 'episodes',
         children: [
           {
             path: '',
-            loadChildren: () => import('../people/people.module').then( m => m.PeoplePageModule)
+            loadChildren: () => import('../episodes/episodes.module').then( m => m.EpisodesPageModule)
+          },
+          {
+            path: ':id',
+            loadChildren: () => import('../episodes-details/episodes-details.module').then( m => m.EpisodesDetailsPageModule)
           }
         ]
       },
       {
-        path: 'planets',
+        path: 'death-count',
         children: [
           {
             path: '',
-            loadChildren: () => import('../planets/planets.module').then( m => m.PlanetsPageModule)
+            loadChildren: () => import('../death-count/death-count.module').then( m => m.DeathCountPageModule)
+          }
+        ]
+      },
+      {
+        path: 'quotes',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../quotes/quotes.module').then( m => m.QuotesPageModule)
           }
         ]
       }
@@ -43,7 +56,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/films',
+    redirectTo: '/tabs/characters',
     pathMatch: 'full'
   }
 ];
