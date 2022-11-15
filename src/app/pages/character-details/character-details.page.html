@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <ion-card *ngIf="character" class="character-card">
-    <ion-item lines="none">
+    <ion-item lines="none" class = "character-name">
       <ion-icon name="pencil-outline" slot="start"></ion-icon>
       Name: {{ character.name }}
     </ion-item>
@@ -25,7 +25,7 @@
       <ion-icon name="briefcase-outline" slot="start"></ion-icon>
       Occupation: {{ character.occupation }}
     </ion-item>
-    <ion-item class="character-info">
+    <ion-item>
       <ion-icon name="alert-circle-outline" slot="start"></ion-icon>
       Status: {{ character.status }}
     </ion-item>
