@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'characters-details',
-    loadChildren: () => import('./pages/characters-details/characters-details.module').then( m => m.CharactersDetailsPageModule)
+    loadChildren: () => import('./pages/character-details/character-details.module').then( m => m.CharactersDetailsPageModule)
   },
   {
     path: 'episodes',

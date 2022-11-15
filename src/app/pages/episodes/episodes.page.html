@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar color = "primary">
-    <ion-title>EPISODES</ion-title>
+    <ion-title class="ion-text-center">EPISODES</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
     <ion-item button detail lines="inset" *ngFor="let episode of episodes | async" (click)="openDetails(episode)">
-      {{ episodes.title }}
+      {{ episode?.title }}
     </ion-item>
   </ion-list>
 </ion-content>

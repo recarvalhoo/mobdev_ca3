@@ -3,15 +3,13 @@
     <ion-buttons slot="end" defaulthref="/tabs/characters">
       <ion-back-button>RETURN</ion-back-button>
     </ion-buttons>
-    <ion-title>{{ character.name }}</ion-title>
+    <ion-title class="ion-text-center">{{ character?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
-
   <ion-card *ngIf="character" class="character-card">
-    
+
     <ion-item lines="none">
       <ion-icon name="document-lock-outline" slot="start"></ion-icon>
       Nickname: {{ character.nickname }}
