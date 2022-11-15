@@ -1,9 +1,14 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>death-count</ion-title>
+  <ion-toolbar color = "primary">
+    <ion-title>DEATH-COUNT</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let death of deaths | async">
+    Death count: {{ death.deathCount }}
+  </ion-item>
+</ion-list>
 
 </ion-content>

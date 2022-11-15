@@ -8,12 +8,26 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getFilms(){
-    return this.http.get('https://swapi.dev/api/films');
+  getCharacters(){
+    return this.http.get('https://www.breakingbadapi.com/api/characters');
   }
-
-  getFilm(id){
-    return this.http.get(`https://swapi.dev/api/films/${id}`);
+  getCharacter(id){
+    return this.http.get(`https://www.breakingbadapi.com/api/characters${id}`);
+  }
+  getEpisodes(){
+    return this.http.get('https://www.breakingbadapi.com/api/episodes');
+  }
+  getEpisode(id){
+    return this.http.get(`https://www.breakingbadapi.com/api/episodes/${id}`);
+  }
+  getDeaths(){
+    return this.http.get('https://www.breakingbadapi.com/api/death-count');
+  }
+  getDeath(id){
+    return this.http.get(`https://www.breakingbadapi.com/api/deaths-count/${id}`);
+  }
+  getQuotes(){
+    return this.http.get('https://www.breakingbadapi.com/api/quotes');
   }
 
 }
